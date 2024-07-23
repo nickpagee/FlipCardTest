@@ -146,14 +146,14 @@ export default function App() {
   // ];
 
   //CONVERTED TO PNGS and MADE SMALLER - THESE WORK!
-  const imageUrlsRequire = [
-    require('./assets/images/testFlipIssue/1 Medium.png'),
-    require('./assets/images/testFlipIssue/2 Medium.png'),
-    require('./assets/images/testFlipIssue/5.png'),
-    require('./assets/images/testFlipIssue/4 Medium.png'),
-    require('./assets/images/testFlipIssue/5 Medium.png'),
-    require('./assets/images/testFlipIssue/6 Medium.png'),
-  ];
+  // const imageUrlsRequire = [
+  //   require('./assets/images/testFlipIssue/1 Medium.png'),
+  //   require('./assets/images/testFlipIssue/2 Medium.png'),
+  //   require('./assets/images/testFlipIssue/5.png'),
+  //   require('./assets/images/testFlipIssue/4 Medium.png'),
+  //   require('./assets/images/testFlipIssue/5 Medium.png'),
+  //   require('./assets/images/testFlipIssue/6 Medium.png'),
+  // ];
 
   //converted the above to jpgs, these work too
   // const imageUrlsRequire = [
@@ -165,14 +165,14 @@ export default function App() {
   //   require('./assets/images/testFlipIssue/6 Medium Large.jpeg'),
   // ];
 
-  // const imageUrlsRequire = [
-  //   require('./assets/images/testFlipIssue/1 Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/2 Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/5 Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/4 Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/5 Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/6 Large.jpeg'),
-  // ];
+  const imageUrlsRequire = [
+    require('./assets/images/testFlipIssue/1 Large.jpeg'),
+    require('./assets/images/testFlipIssue/2 Large.jpeg'),
+    require('./assets/images/testFlipIssue/5 Large.jpeg'),
+    require('./assets/images/testFlipIssue/4 Large.jpeg'),
+    require('./assets/images/testFlipIssue/5 Large.jpeg'),
+    require('./assets/images/testFlipIssue/6 Large.jpeg'),
+  ];
 
  
   return (
