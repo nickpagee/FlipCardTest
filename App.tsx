@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
+// IF YOU SWITCH TO EXPO 49, you'll need to declare Image in 'react-native' 
 //need to use Expo Image or else you'll get the dreaded "No suitable URL request handler found for ph://5BC025F5-22D3-4B97-BF17-39321661A5E2/L0/001" err
 import { Image } from 'expo-image';
 import * as ImageManipulator from 'expo-image-manipulator'; //used only for testing compression
@@ -49,6 +50,7 @@ export default function App() {
 
   useEffect(() => {
     loadImages();
+    console.log('imageUrls:', imageUrls);
   }, []);
   
 
@@ -156,23 +158,23 @@ export default function App() {
   // ];
 
   //converted the above to jpgs, these work too
-  // const imageUrlsRequire = [
-  //   require('./assets/images/testFlipIssue/1 Medium Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/2 Medium Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/5 Medium Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/4 Medium Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/5 Medium Large.jpeg'),
-  //   require('./assets/images/testFlipIssue/6 Medium Large.jpeg'),
-  // ];
-
   const imageUrlsRequire = [
-    require('./assets/images/testFlipIssue/1 Large.jpeg'),
-    require('./assets/images/testFlipIssue/2 Large.jpeg'),
-    require('./assets/images/testFlipIssue/5 Large.jpeg'),
-    require('./assets/images/testFlipIssue/4 Large.jpeg'),
-    require('./assets/images/testFlipIssue/5 Large.jpeg'),
-    require('./assets/images/testFlipIssue/6 Large.jpeg'),
+    require('./assets/images/testFlipIssue/1 Medium Large.jpeg'),
+    require('./assets/images/testFlipIssue/2 Medium Large.jpeg'),
+    require('./assets/images/testFlipIssue/5 Medium Large.jpeg'),
+    require('./assets/images/testFlipIssue/4 Medium Large.jpeg'),
+    require('./assets/images/testFlipIssue/5 Medium Large.jpeg'),
+    require('./assets/images/testFlipIssue/6 Medium Large.jpeg'),
   ];
+
+  // const imageUrlsRequire = [
+  //   require('./assets/images/testFlipIssue/1 Large.jpeg'),
+  //   require('./assets/images/testFlipIssue/2 Large.jpeg'),
+  //   require('./assets/images/testFlipIssue/5 Large.jpeg'),
+  //   require('./assets/images/testFlipIssue/4 Large.jpeg'),
+  //   require('./assets/images/testFlipIssue/5 Large.jpeg'),
+  //   require('./assets/images/testFlipIssue/6 Large.jpeg'),
+  // ];
 
  
   return (
@@ -181,22 +183,21 @@ export default function App() {
       <View style={{ margin: 16, width: '50%', alignSelf: 'center' }} />
       <Text>Load from Media Library</Text>
       <StatusBar style="auto" />
+     
       {imagesLoaded && imageUrls.length >= 6 && (
         <FlipCard2024 images={imageUrls.slice(0, 6)} />
       )}
-      <View style={{ margin: 16, width: '50%', alignSelf: 'center' }} />
+
+
       
-      <Text>Load remote URLs</Text>
-      {imageUrls2.length >= 6 && (
-        <FlipCard2024 images={imageUrls2.slice(0, 6)}  />
-      )}
+      {/*<View style={{ margin: 16, width: '50%', alignSelf: 'center' }} />
+       <Text>Load remote URLs</Text>
+      <FlipCard2024 images={imageUrls2.slice(0, 6)}  />  */}
       
-      <View style={{ margin: 16, width: '50%', alignSelf: 'center' }} />
-      
+      {/* <View style={{ margin: 16, width: '50%', alignSelf: 'center' }} />
       <Text>Load via 'require' asset</Text>
-      {imageUrlsRequire.length >= 6 && (
-        <FlipCard2024RequireAssets images={imageUrlsRequire.slice(0, 6)}  />
-      )}
+      <FlipCard2024RequireAssets images={imageUrlsRequire.slice(0, 6)}  /> */}
+
       <Button title="Reload Images" onPress={loadImages} />
     </View>
   );
